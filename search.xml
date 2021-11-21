@@ -4,12 +4,18 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="/2021/11/21/test/"/>
-      <url>/2021/11/21/test/</url>
+      <title>My Young Lady</title>
+      <link href="/2021/11/21/myyounglady/"/>
+      <url>/2021/11/21/myyounglady/</url>
       
-        <content type="html"><![CDATA[<p>This is a test</p>]]></content>
+        <content type="html"><![CDATA[<p> 女儿是整个家的期盼，我爸年轻的时候一直希望有个女儿，我也一样，后来终于把她盼来了，她出生的时候，我高兴的像个孩子。在教育孩子方面，我们一直是一个唱红脸，一个唱白脸，防止他们过于调皮。而我是唱红脸的那个，每次她调皮的时候，我都会假装要揍她，她妈妈这时候就会站出来阻拦，所以她和她妈妈更亲一些。其实我又怎么会舍得揍她呢。女儿有些腹黑属性，不知道随谁。我记得有一次我藏私房钱，被发现了，她和我索要100元，说要帮我保密，我给了她100元，但是她拿了钱后马上就把我告发了。事后她还和我说：’老爸，这是我向老妈的投名状，我是身在曹营心在汉，以后老妈那边有什么消息，我都帮你打探’，大眼睛一眨一眨，我信了你的鬼，好吧，你怕不是想在我这边再搞情报。</p>]]></content>
       
+      
+      <categories>
+          
+          <category> daily </category>
+          
+      </categories>
       
       
     </entry>
@@ -17,25 +23,18 @@
     
     
     <entry>
-      <title>myfist</title>
+      <title>New start</title>
       <link href="/2021/11/21/myfist/"/>
       <url>/2021/11/21/myfist/</url>
       
-        <content type="html"><![CDATA[<p>Everything is difficult during the first step. But we will finally figure out!</p>]]></content>
+        <content type="html"><![CDATA[<p>&nbsp;&nbsp;Everything is difficult during the first step. But we will finally figure out!今天看了万物既伟大又渺小的S02.E01.第四部分，Mrs Tompkin双目失明，她摸着墙来到兽医诊所，在回去的时候说：“Once I’ve walked it once, It’s no bother doing so again.”，我想就像第一次制作网页、第一次完成一项任务一样。另外，在结尾中的一句话同样让我印象深刻：“It’s not the mountain we conquer…-But ourselves.”</p>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2021/11/20/hello-world/"/>
-      <url>/2021/11/20/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
+      <categories>
+          
+          <category> teleplay </category>
+          
+      </categories>
       
       
     </entry>
