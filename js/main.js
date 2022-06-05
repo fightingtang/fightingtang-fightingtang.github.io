@@ -301,7 +301,7 @@ function submit(){
 
     var car_number_temp  = document.getElementById("car_number").value;
     console.log(car_number_temp);
-    var car_number = car_number_temp.substring(0,8);
+    var car_number = car_number_temp.substring(0,7);
     console.log(car_number);
 
     var person  = document.getElementById("person").value;
