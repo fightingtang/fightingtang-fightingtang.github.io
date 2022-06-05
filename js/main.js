@@ -299,7 +299,9 @@ function submit(){
     var car_type_index=selector2.selectedIndex;
     var car_type = selector2.options[car_type_index].text;
 
-    var car_number  = document.getElementById("car_number").value;
+    var car_number_temp  = document.getElementById("car_number").value;
+    console.log(car_number_temp);
+    var car_number = car_number_temp.substring(0,8);
     console.log(car_number);
 
     var person  = document.getElementById("person").value;
