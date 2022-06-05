@@ -1,8 +1,8 @@
-var index = 4;//初始下标
+var index = 2;//初始下标
 var indexArr= new Array();
 indexArr.push(1);
-indexArr.push(2);
-indexArr.push(3);
+// indexArr.push(2);
+// indexArr.push(3);
 
 function addRow() {
     index++;
@@ -285,9 +285,8 @@ function submit(){
     var car_type_index=selector2.selectedIndex;
     var car_type = selector2.options[car_type_index].text;
 
-    var selector3  = document.getElementById("car_number");
-    var car_number_index=selector3.selectedIndex;
-    var car_number = selector3.options[car_number_index].text;
+    var car_number  = document.getElementById("car_number").value;
+    console.log(car_number);
 
     var person  = document.getElementById("person").value;
     console.log(person);
@@ -335,14 +334,19 @@ function submit(){
             continue;
         }
         var total = 0;
-
+        console.log(Input);
+        
         for (var j = 0;j<Input.length;j++){
             if(i==0){
                 if(j==1){
                     data.push(car_type);
                     data.push(car_number);
-                    data.push(Input[j].value);
+                    var start_time = Input[j].value;
+                    var end_time = Input[j+1].value; 
+                    data.push(start_time+"-"+end_time);
                     
+                }else if(j==2){
+                    continue;
                 }else{
                     data.push(Input[j].value);
                 }

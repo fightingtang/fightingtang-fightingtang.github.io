@@ -35,17 +35,23 @@
             </select>
 
             车牌：
-            <select id="car_number">
+            <input id="car_number" type="text" list="number_list" placeholder="请选择">
+            <datalist id="number_list">
+                <option>粤A1G9S5</option>
+                <option>粤A1G9S5</option>
+            </datalist>
+            <!-- <select id="car_number">
                 <option value ="volvo">粤A1G9S5</option>
                 <option value ="saab">粤A1G9S5</option>
-            </select>
+            </select> -->
 
             用车人：<input type="text" id="person" name="name" maxlength="20" size="10">
             <div class="info" id="info">   
                 <div class="travel_info_" id="travel_info_" style="display: none">
                     <div class="add_left">
                         出车日期: <input type="date" name="bday">
-                        用车时间：<input type="text" id="name" name="name" maxlength="20" size="10">
+                        出车时间：<input type="time" id="start_time" name="name" maxlength="20" size="10">
+                        结束时间：<input type="time" id="end_time" name="name" maxlength="20" size="10">
                         基本行程：<input type="text" id="name" name="name" maxlength="20" size="10">
                         租金：<input type="text" id="name" name="name"  maxlength="20" size="10">
                         油费：<input type="text" id="name" name="name"  maxlength="20" size="10">
@@ -59,29 +65,33 @@
                         <button type="button" class="delete_botton" onclick="deleteRow('##')">-</button>
                     </div>
                 </div>
+                
 
+                
                 <div class="travel_info" id="travel_info1">
                     <div class="add_left">
-                        出车日期: <input type="date" name="bday">
-                        用车时间：<input type="text" id="name" name="name" maxlength="20" size="10">
-                        基本行程：<input type="text" id="name" name="name" maxlength="20" size="10">
-                        租金：<input type="text" id="name" name="name"  maxlength="20" size="10">
-                        油费：<input type="text" id="name" name="name"  maxlength="20" size="10">
-                        路费：<input type="text" id="name" name="name"  maxlength="20" size="10">
-                        停车费：<input type="text" id="name" name="name"  maxlength="20" size="10">
-                        超时：<input type="text" id="name" name="name"  maxlength="20" size="10">
-                        超公里：<input type="text" id="name" name="name"  maxlength="20" size="10">
-                        餐费：<input type="text" id="name" name="name"  maxlength="20" size="10">
-                        住宿费：<input type="text" id="name" name="name"  maxlength="20" size="10">
+                        出车日期: <input type="date" required="required" name="bday">
+                        出车时间：<input type="time" id="start_time" name="name" required="required" maxlength="20" size="10">
+                        结束时间：<input type="time" id="end_time" name="name" required="required" maxlength="20" size="10">
+                        基本行程：<input type="text" id="name" name="name" required="required" maxlength="20" size="10">
+                        租金：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
+                        油费：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
+                        路费：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
+                        停车费：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
+                        超时：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
+                        超公里：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
+                        餐费：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
+                        住宿费：<input type="text" id="name" name="name"  required="required" maxlength="20" size="10">
                         <button type="button" class="delete_botton" onclick="deleteRow('1')">-</button>
                     </div>
                 </div>
 
 
-                <div class="travel_info" id="travel_info2">
+                <!-- <div class="travel_info" id="travel_info2">
                     <div class="add_left">
                         出车日期: <input type="date" name="bday">
-                        用车时间：<input type="text" id="name" name="name" maxlength="20" size="10">
+                        出车时间：<input type="time" id="start_time" name="name" maxlength="20" size="10">
+                        结束时间：<input type="time" id="end_time" name="name" maxlength="20" size="10">
                         基本行程：<input type="text" id="name" name="name" maxlength="20" size="10">
                         租金：<input type="text" id="name" name="name"  maxlength="20" size="10">
                         油费：<input type="text" id="name" name="name"  maxlength="20" size="10">
@@ -98,7 +108,8 @@
                 <div class="travel_info" id="travel_info3">
                     <div class="add_left">
                         出车日期: <input type="date" name="bday">
-                        用车时间：<input type="text" id="name" name="name" maxlength="20" size="10">
+                        出车时间：<input type="time" id="start_time" name="name" maxlength="20" size="10">
+                        结束时间：<input type="time" id="end_time" name="name" maxlength="20" size="10">
                         基本行程：<input type="text" id="name" name="name" maxlength="20" size="10">
                         租金：<input type="text" id="name" name="name"  maxlength="20" size="10">
                         油费：<input type="text" id="name" name="name"  maxlength="20" size="10">
@@ -110,14 +121,17 @@
                         住宿费：<input type="text" id="name" name="name"  maxlength="20" size="10">
                         <button type="button" class="delete_botton" onclick="deleteRow('3')">-</button>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <button type="button" class="add_botton" onclick="addRow()">+</button>
             
             <div class="submit">
-                <button type="button" class="submit_botton" onclick="submit()">提交</button>
+                <input type="submit" class="submit_botton" onclick="submit()"> 
+                <!-- <button type="button" class="submit_botton" onclick="submit()">提交</button> -->
             </div>
+
+
         </div>
     </div>
 
