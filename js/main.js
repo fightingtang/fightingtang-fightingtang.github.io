@@ -357,8 +357,12 @@ function submit(){
                     if(j==1){
                         data.push("");
                         data.push("");
-                        data.push(Input[j].value);
+                        var start_time = Input[j].value;
+                        var end_time = Input[j+1].value; 
+                        data.push(start_time+"-"+end_time);
                         
+                    }else if(j==2){
+                        continue;
                     }else{
                             data.push(Input[j].value);
                     }
