@@ -10,7 +10,9 @@ function addRow() {
     var showHtml = $("#travel_info_").html();
     var html = '<div class="travel_info" id="travel_info'+index +'">'+showHtml+"</div>";
     html = html.replace(/##/g,index);
-    $("#info").before($(html));
+    // $("#info").before($(html));
+    // document.getElementById("Info").appendChild($(html));
+    $(html).appendTo($($("#info")));
     console.log(html);
 }
 
@@ -276,6 +278,18 @@ function sheet2blob(sheet){
 
 function submit(){
     let all_data = [];
+
+    let heji = [];
+
+    var total_oil=0;
+    var total_rent=0;
+    var total_lufei=0;
+    var total_tingche=0;
+    var total_chaoshi=0;
+    var total_chaokil=0;
+    var total_food=0;
+    var total_hotel=0;
+    var total_final=0;
     
     var selector1  = document.getElementById("company");
     var company_index=selector1.selectedIndex;
@@ -337,8 +351,31 @@ function submit(){
         console.log(Input);
         
         for (var j = 0;j<Input.length;j++){
+            // console.log("data: ",Input[j].value)
+
             if(i==0){
-                if(j==1){
+                if(j==0){
+                    let riqi_list = Input[j].value.split("-");
+                    console.log(riqi_list);
+                    
+                    var month;
+                    if (riqi_list[1][0]=="0"){
+                        month = riqi_list[1][1];
+                    }else{
+                        month = riqi_list[1];
+                    }
+
+                    var day;
+
+                    if (riqi_list[2][0]=="0"){
+                        day = riqi_list[2][1];
+                    }else{
+                        day = riqi_list[2];
+                    }
+
+                    var riqi = month+"月"+day+"日";
+                    data.push(riqi);
+                }else if(j==1){
                     data.push(car_type);
                     data.push(car_number);
                     var start_time = Input[j].value;
@@ -350,36 +387,123 @@ function submit(){
                 }else{
                     data.push(Input[j].value);
                 }
-                if(j>=3){
+                if(j>=4){
                     total = total + Number(Input[j].value);
+                    if(j==4){
+                        total_rent=total_rent+Number(Input[j].value);
+                    }
+                    if(j==5){
+                        total_oil=total_oil+Number(Input[j].value);
+                    }
+                    if(j==6){
+                        total_lufei=total_lufei+Number(Input[j].value);
+                    }
+                    if(j==7){
+                        total_tingche=total_tingche+Number(Input[j].value);
+                    }
+                    if(j==8){
+                        total_chaoshi=total_chaoshi+Number(Input[j].value);
+                    }
+                    if(j==9){
+                        total_chaokil=total_chaokil+Number(Input[j].value);
+                    }
+                    if(j==10){
+                        total_food=total_food+Number(Input[j].value);
+                    }
+                    if(j==11){
+                        total_hotel=total_hotel+Number(Input[j].value);
+                    }
                 }
             }else{
-                    if(j==1){
-                        data.push("");
-                        data.push("");
-                        var start_time = Input[j].value;
-                        var end_time = Input[j+1].value; 
-                        data.push(start_time+"-"+end_time);
-                        
-                    }else if(j==2){
-                        continue;
+                if(j==0){
+                    let riqi_list = Input[j].value.split("-");
+                    var month;
+                    if (riqi_list[1][0]=="0"){
+                        month = riqi_list[1][1];
                     }else{
-                            data.push(Input[j].value);
+                        month = riqi_list[1];
+                    }
+
+                    var day;
+                    if (riqi_list[2][0]=="0"){
+                        day = riqi_list[2][1];
+                    }else{
+                        day = riqi_list[2];
+                    }
+
+                    var riqi = month+"月"+day+"日";
+                    // var riqi = riqi_list[0]+"/"+riqi_list[1]+"/"+riqi_list[2];
+                    data.push(riqi);
+                }else if(j==1){
+                    data.push("");
+                    data.push("");
+                    var start_time = Input[j].value;
+                    var end_time = Input[j+1].value; 
+                    data.push(start_time+"-"+end_time);
+                    
+                }else if(j==2){
+                    continue;
+                }else{
+                        data.push(Input[j].value);
+                }
+                
+                if(j>=4){
+                    total = total + Number(Input[j].value);
+
+                    if(j==4){
+                        total_rent=total_rent+Number(Input[j].value);
+                    }
+                    if(j==5){
+                        total_oil=total_oil+Number(Input[j].value);
+                    }
+                    if(j==6){
+                        total_lufei=total_lufei+Number(Input[j].value);
+                    }
+                    if(j==7){
+                        total_tingche=total_tingche+Number(Input[j].value);
+                    }
+                    if(j==8){
+                        total_chaoshi=total_chaoshi+Number(Input[j].value);
+                    }
+                    if(j==9){
+                        total_chaokil=total_chaokil+Number(Input[j].value);
+                    }
+                    if(j==10){
+                        total_food=total_food+Number(Input[j].value);
+                    }
+                    if(j==11){
+                        total_hotel=total_hotel+Number(Input[j].value);
                     }
                     
-                    if(j>=3){
-                        total = total + Number(Input[j].value);
-                    }
+                }
             }
         }
-        data.push("");
+        console.log("total: ",total_rent);
+        total_final = total_final + total;
+        data.push(total);
 
         all_data.push(data);
     }
     all_data.push(["","","","","","","","","","","","","","",""]);
 
-    all_data.push(["合计","","","","","","","","","","","","","",""]);
-    all_data.push(["备注：账户名称：广州广源汽车租赁有限公司    银行账号：1209-1816-4310-902    开户行：招商银行淘金支行，需转费用     元。\n●请贵单位转账时备注用车单据号（052224）","","","","","","","","","","","","","",""]);
+    var heji_list=["合计","","","","",""];
+
+
+    heji_list.push(total_rent);
+    heji_list.push(total_oil);
+    heji_list.push(total_lufei);
+    heji_list.push(total_tingche);
+    heji_list.push(total_chaoshi);
+    heji_list.push(total_chaokil);
+    heji_list.push(total_food);
+    heji_list.push(total_hotel);
+    heji_list.push(total_final);
+    all_data.push(heji_list);
+
+    var ps ="备注：账户名称：广州广源汽车租赁有限公司    银行账号：1209-1816-4310-902    开户行：招商银行淘金支行，需转费用  "+total_final+"  元。\n●请贵单位转账时备注用车单据号（052224）"
+    
+    all_data.push([ps,"","","","","","","","","","","","","",""]);
+    
     all_data.push(["广州广源汽车租赁有限公司（财务部）","","","","","","","","","","","","","",""]);
 
     console.log(all_data);
